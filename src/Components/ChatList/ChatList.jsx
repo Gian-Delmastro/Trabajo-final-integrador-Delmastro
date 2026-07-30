@@ -1,12 +1,16 @@
 import "./ChatList.css";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ContactContext } from "../../Context/ContactContext";
 import ChatItem from "../ChatItem/ChatItem";
+import { useSearchParams } from "react-router-dom";
 
 function ChatList() {
 
     const { contacts } = useContext(ContactContext);
-    const [search, setSearch] = useState("");
+
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const search = searchParams.get("search") || "";
 
     return (
         <section className="chat-list">
@@ -30,7 +34,18 @@ function ChatList() {
                     type="text"
                     placeholder="Buscar un chat o iniciar uno nuevo"
                     value={search}
-                    onChange={(event) => setSearch(event.target.value)}
+                    onChange={(event) => {
+
+                        if (event.target.value === "") {
+                            setSearchParams({});
+                        }
+                        else {
+                            setSearchParams({
+                                search: event.target.value
+                            });
+                        }
+
+                    }}
                 />
 
             </div>
