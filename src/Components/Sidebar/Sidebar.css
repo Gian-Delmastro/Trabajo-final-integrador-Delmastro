@@ -1,6 +1,7 @@
 .sidebar {
     width: 64px;
     height: 100vh;
+    height: 100dvh;
     background-color: #1f2c34;
 
     display: flex;
