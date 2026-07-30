@@ -2,6 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./Screens/Home/Home";
+import Chat from "./Screens/Chat/Chat";
 import { ContactContextProvider } from "./Context/ContactContext";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
                 <Route
                     path="/chat/:contact_id"
-                    element={<Home />}
+                    element={<Chat />}
                 />
 
             </Route>

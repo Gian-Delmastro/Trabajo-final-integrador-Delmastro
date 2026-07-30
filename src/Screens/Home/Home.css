@@ -31,3 +31,26 @@
         display: flex;
     }
 }
+
+.empty-chat {
+    flex: 1;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0b141a;
+}
+
+.empty-chat p {
+    color: #8696a0;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .empty-chat {
+        display: none;
+    }
+}
