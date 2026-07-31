@@ -108,12 +108,25 @@ function ChatWindow() {
                     onChange={(event) => setNewMessage(event.target.value)}
                 />
 
-                <button
-                    type="submit"
-                    className="send-button"
-                >
-                    <i className="bi bi-send-fill"></i>
-                </button>
+                {newMessage.trim() === "" ? (
+
+                    <button
+                        type="button"
+                        className="send-button"
+                    >
+                        <i className="bi bi-mic-fill"></i>
+                    </button>
+
+                ) : (
+
+                    <button
+                        type="submit"
+                        className="send-button"
+                    >
+                        <i className="bi bi-send-fill"></i>
+                    </button>
+
+                )}
 
             </form>
 
