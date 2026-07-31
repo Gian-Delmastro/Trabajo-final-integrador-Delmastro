@@ -1,6 +1,7 @@
 import "./ChatList.css";
 import { useContext } from "react";
 import { ContactContext } from "../../Context/ContactContext";
+import { ThemeContext } from "../../Context/ThemeContext";
 import ChatItem from "../ChatItem/ChatItem";
 import { useSearchParams } from "react-router-dom";
 
@@ -9,7 +10,7 @@ function ChatList() {
     const { contacts } = useContext(ContactContext);
 
     const [searchParams, setSearchParams] = useSearchParams();
-
+    const { theme, toggleTheme } = useContext(ThemeContext);
     const search = searchParams.get("search") || "";
 
     return (
@@ -20,6 +21,10 @@ function ChatList() {
                 <h2>WhatsApp</h2>
 
                 <div className="header-icons">
+                    <i
+                        className={theme === "dark" ? "bi bi-sun" : "bi bi-moon-stars"}
+                        onClick={toggleTheme}
+                    ></i>
                     <i className="bi bi-pencil-square"></i>
                     <i className="bi bi-three-dots-vertical"></i>
                 </div>

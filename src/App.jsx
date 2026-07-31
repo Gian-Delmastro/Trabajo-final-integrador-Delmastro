@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Screens/Home/Home";
 import Chat from "./Screens/Chat/Chat";
 import { ContactContextProvider } from "./Context/ContactContext";
+import { ThemeContextProvider } from "./Context/ThemeContext";
 
 function App() {
 
@@ -11,17 +12,21 @@ function App() {
 
         <Routes>
 
-            <Route element={<ContactContextProvider />}>
+            <Route element={<ThemeContextProvider />}>
 
-                <Route
-                    path="/"
-                    element={<Home />}
-                />
+                <Route element={<ContactContextProvider />}>
 
-                <Route
-                    path="/chat/:contact_id"
-                    element={<Chat />}
-                />
+                    <Route
+                        path="/"
+                        element={<Home />}
+                    />
+
+                    <Route
+                        path="/chat/:contact_id"
+                        element={<Chat />}
+                    />
+
+                </Route>
 
             </Route>
 

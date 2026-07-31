@@ -6,3 +6,46 @@ html, body, #root {
     overscroll-behavior-y: none;
     background-color: #111b21;
 }
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overscroll-behavior-y: none;
+    background-color: #111b21;
+}
+
+:root {
+    --bg-sidebar: #1f2c34;
+    --bg-app: #111b21;
+    --bg-chat: #0b141a;
+    --bg-header: #202c33;
+    --bg-hover: #2a3942;
+    --bg-message-sent: #005c4b;
+    --bg-message-received: #202c33;
+
+    --text-primary: #ffffff;
+    --text-secondary: #8696a0;
+    --text-message-meta: #c7d3d8;
+    --icon-color: #aebac1;
+    --border-color: #2a3942;
+    --accent-check: #53bdeb;
+}
+
+body.light {
+    --bg-sidebar: #f0f2f5;
+    --bg-app: #ffffff;
+    --bg-chat: #efeae2;
+    --bg-header: #f0f2f5;
+    --bg-hover: #f5f6f6;
+    --bg-message-sent: #d9fdd3;
+    --bg-message-received: #ffffff;
+
+    --text-primary: #111b21;
+    --text-secondary: #667781;
+    --text-message-meta: #667781;
+    --icon-color: #54656f;
+    --border-color: #e9edef;
+    --accent-check: #53bdeb;
+}

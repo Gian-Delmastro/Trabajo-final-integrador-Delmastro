@@ -2,7 +2,7 @@
     width: 64px;
     height: 100vh;
     height: 100dvh;
-    background-color: #1f2c34;
+    background-color: var(--bg-sidebar);
 
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
 .sidebar-divider {
     width: 36px;
     border: none;
-    border-top: 1px solid #AEBAC1;
+    border-top: 1px solid var(--icon-color);
 }
 
 .sidebar-bottom {
@@ -43,13 +43,13 @@
 
 .sidebar i {
     font-size: 22px;
-    color: #AEBAC1;
+    color: 	var(--icon-color);
     cursor: pointer;
     transition: 0.2s;
 }
 
 .sidebar i:hover {
-    color: white;
+    color: var(--text-primary);
 }
 
 

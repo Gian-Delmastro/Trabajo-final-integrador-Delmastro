@@ -3,7 +3,7 @@
     height:100vh;
     height:100dvh;
 
-    background:#111b21;
+    background: var(--bg-app);
 
     display:flex;
     flex-direction:column;
@@ -18,7 +18,7 @@
 }
 
 .chat-list-header h2{
-    color:white;
+    color: var(--text-primary);
     font-size:28px;
     font-weight:600;
 }
@@ -29,7 +29,7 @@
 }
 
 .header-icons i{
-    color:#aebac1;
+    color: var(--icon-color);
     font-size:22px;
     cursor:pointer;
 }
@@ -41,12 +41,12 @@
     margin:0 15px;
     padding:10px 15px;
 
-    background:#202c33;
+    background:var(--bg-header);
     border-radius:10px;
 }
 
 .search-container i{
-    color:#8696a0;
+    color:var(--text-secondary);
     margin-right:10px;
 }
 
@@ -57,11 +57,11 @@
     border:none;
     outline:none;
 
-    color:white;
+    color:var(--text-primary);
 }
 
 .search-container input::placeholder{
-    color:#8696a0;
+    color:var(--text-secondary);
 }
 
 .filters{
@@ -73,8 +73,8 @@
 
 .filters button{
     border:none;
-    background:#202c33;
-    color:#aebac1;
+    background:var(--bg-header);
+    color:var(--icon-color);
 
     padding:8px 15px;
 
@@ -85,7 +85,7 @@
 }
 
 .filters button:hover{
-    background:#2a3942;
+    background:var(--bg-hover);
 }
 
 .chat-items{
